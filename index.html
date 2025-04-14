@@ -1,0 +1,3037 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Kállis Pedras Naturais - Peças Exclusivas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* Reset e estilos base */
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+:root {
+--color-gold: #D4AF37;
+--color-gold-light: #FFF1A8;
+--color-beige: #e2c4b9; /* Cor bege atualizada */
+--color-brown: #C49A6C; /* Cor marrom da imagem */
+--color-wine: #320000; /* Cor vinho forte atualizada */
+--color-white: #FFFFFF;
+--color-green: #25D366; /* Cor verde do WhatsApp */
+--color-star: #FFD700; /* Cor das estrelas */
+--color-sand: #E2D8C6; /* Cor areia para o mini carrossel */
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: 'Inter', sans-serif;
+background-color: #F6F6F5;
+color: var(--color-wine);
+line-height: 1.6;
+overflow-x: hidden;
+width: 100%;
+}
+
+img {
+max-width: 100%;
+height: auto;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+/* Utilitários */
+.container {
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 1rem;
+}
+
+.font-serif {
+font-family: 'Playfair Display', serif;
+}
+
+.font-light {
+font-weight: 300;
+letter-spacing: 0.02em;
+}
+
+/* Header */
+header {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 50;
+background-color: var(--color-wine); /* Cor vinho forte */
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
+border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem;
+height: 70px; /* Altura fixa para o header */
+}
+
+.logo {
+height: 40px; /* Altura fixa para a logo */
+display: flex;
+align-items: center;
+}
+
+.logo img {
+height: 100%;
+width: auto;
+object-fit: contain;
+}
+
+.nav-menu {
+display: none;
+}
+
+.nav-menu.active {
+display: flex;
+flex-direction: column;
+position: absolute;
+top: 100%;
+left: 0;
+right: 0;
+background-color: var(--color-wine);
+padding: 1.5rem;
+border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+z-index: 100; /* Garantir que o menu fique acima de outros elementos */
+}
+
+.nav-menu a {
+color: var(--color-white);
+transition: color 0.3s;
+margin: 0.5rem 0;
+}
+
+.nav-menu a:hover {
+opacity: 0.8;
+}
+
+.menu-toggle {
+background: none;
+border: none;
+cursor: pointer;
+display: block;
+}
+
+/* Hero Section - MODIFICADA */
+.hero {
+position: relative;
+width: 100%;
+margin-top: 70px; /* Espaço para o header fixo */
+overflow: hidden;
+}
+
+/* Banner Carousel */
+.banner-carousel {
+position: relative;
+width: 100%;
+overflow: hidden;
+}
+
+.banner-track {
+display: flex;
+transition: transform 0.5s ease;
+width: 100%;
+}
+
+.banner-item {
+flex: 0 0 100%;
+width: 100%;
+}
+
+.banner-item img {
+width: 100%;
+height: auto;
+display: block;
+}
+
+.banner-nav {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 40px;
+height: 40px;
+background-color: rgba(255, 255, 255, 0.5);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+z-index: 10;
+}
+
+.banner-nav.prev {
+left: 10px;
+}
+
+.banner-nav.next {
+right: 10px;
+}
+
+.banner-dots {
+position: absolute;
+bottom: 20px;
+left: 0;
+right: 0;
+display: flex;
+justify-content: center;
+gap: 8px;
+}
+
+.banner-dot {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: rgba(255, 255, 255, 0.5);
+cursor: pointer;
+}
+
+.banner-dot.active {
+background-color: var(--color-white);
+}
+
+.desktop-banner-carousel {
+display: none;
+}
+
+.mobile-banner-carousel {
+display: block;
+}
+
+/* Mini Carousel Section */
+.mini-carousel-section {
+background-color: var(--color-sand);
+height: 70px; /* Mesma altura do header */
+overflow: hidden;
+position: relative;
+border-top: 1px solid rgba(50, 0, 0, 0.1);
+border-bottom: 1px solid rgba(50, 0, 0, 0.1);
+}
+
+.mini-carousel-container {
+display: flex;
+height: 100%;
+transition: transform 0.5s ease;
+}
+
+.mini-carousel-item {
+flex: 0 0 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 0 2rem;
+}
+
+.mini-carousel-icon {
+margin-right: 0.75rem;
+flex-shrink: 0;
+}
+
+.mini-carousel-icon svg {
+width: 20px;
+height: 20px;
+}
+
+.mini-carousel-content {
+text-align: left;
+}
+
+.mini-carousel-title {
+font-size: 0.85rem;
+font-weight: 600;
+color: var(--color-wine);
+margin-bottom: 0.1rem;
+}
+
+.mini-carousel-text {
+font-size: 0.75rem;
+color: var(--color-wine);
+}
+
+.mini-carousel-nav {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 30px;
+height: 30px;
+background: none;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+z-index: 10;
+border: none;
+}
+
+.mini-carousel-nav.prev {
+left: 10px;
+}
+
+.mini-carousel-nav.next {
+right: 10px;
+}
+
+/* Collection Section */
+.section {
+padding: 3rem 0;
+}
+
+.section-title {
+font-size: 2rem;
+text-align: center;
+margin-bottom: 2rem;
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.6s ease, transform 0.6s ease;
+white-space: nowrap;
+color: var(--color-wine);
+}
+
+.section-title.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+.collection-line {
+margin-bottom: 2.5rem;
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.collection-line.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+.line-title {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+text-align: center;
+color: var(--color-wine);
+}
+
+/* Estilos atualizados para o carrossel */
+.carousel-container {
+position: relative;
+width: 100%;
+overflow: visible;
+padding: 0;
+touch-action: pan-y;
+cursor: grab;
+margin: 0 -1rem;
+}
+
+.carousel-container:active {
+cursor: grabbing;
+}
+
+.carousel {
+display: flex;
+transition: transform 0.5s ease;
+padding: 0.5rem 0;
+margin-left: 1rem;
+}
+
+.carousel-item {
+flex: 0 0 80%;
+max-width: 80%;
+transition: opacity 0.5s ease, transform 0.5s ease;
+padding: 0;
+background-color: #FFFFFF;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+margin-right: 1rem;
+}
+
+.collection-image {
+position: relative;
+overflow: hidden;
+aspect-ratio: 1 / 1;
+background-color: #f5f5f5;
+}
+
+.collection-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.5s ease;
+}
+
+.carousel-item:hover .collection-image img {
+transform: scale(1.1);
+}
+
+/* Estilo para imagens em preto e branco */
+.grayscale-img {
+filter: grayscale(100%);
+}
+
+.product-info {
+padding: 1rem;
+}
+
+.product-title {
+font-size: 1.25rem;
+margin-bottom: 0.5rem;
+color: #000;
+font-weight: 600;
+}
+
+.product-rating {
+display: flex;
+align-items: center;
+margin-bottom: 0.5rem;
+}
+
+.stars {
+display: flex;
+color: var(--color-star);
+margin-right: 0.5rem;
+}
+
+.review-count {
+color: #666;
+font-size: 0.875rem;
+}
+
+.product-price {
+font-size: 1.5rem;
+font-weight: 700;
+margin-bottom: 1rem;
+color: #000;
+}
+
+.product-btn {
+display: block;
+width: 100%;
+padding: 0.75rem;
+background-color: var(--color-wine);
+color: var(--color-white);
+text-align: center;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-weight: 500;
+transition: opacity 0.3s;
+}
+
+.product-btn:hover {
+opacity: 0.9;
+}
+
+/* Botão dourado para produtos vendidos */
+.sold-btn {
+background: linear-gradient(135deg, #D4AF37 0%, #FFF1A8 50%, #D4AF37 100%);
+color: #320000;
+font-weight: 600;
+cursor: default;
+}
+
+.sold-btn:hover {
+opacity: 1;
+}
+
+/* Separador entre seções */
+.section-divider {
+height: 1px;
+background-color: rgba(50, 0, 0, 0.1);
+margin: 0 auto 2rem;
+width: 80%;
+max-width: 800px;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+position: relative;
+padding: 4rem 0;
+overflow: hidden;
+}
+
+.testimonials-bg {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 0;
+}
+
+.testimonials-bg::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(246, 246, 245, 0.85);
+z-index: 1;
+}
+
+.testimonials-bg img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.testimonials-container {
+position: relative;
+z-index: 2;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 1rem;
+}
+
+.testimonials-title {
+font-size: 2rem;
+text-align: center;
+margin-bottom: 2.5rem;
+color: var(--color-wine);
+}
+
+.testimonials-carousel {
+position: relative;
+overflow: visible;
+width: 100%;
+margin: 0 auto;
+}
+
+.testimonials-track {
+display: flex;
+transition: transform 0.5s ease;
+}
+
+.testimonial-item {
+flex: 0 0 100%;
+padding: 0 1rem;
+box-sizing: border-box;
+}
+
+.testimonial-card {
+background-color: var(--color-white);
+border-radius: 12px;
+padding: 1.5rem;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-header {
+display: flex;
+align-items: center;
+margin-bottom: 1rem;
+}
+
+.testimonial-avatar {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+overflow: hidden;
+margin-right: 1rem;
+border: 2px solid var(--color-wine);
+}
+
+.testimonial-avatar img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.testimonial-info {
+flex: 1;
+}
+
+.testimonial-name {
+font-size: 1.125rem;
+font-weight: 600;
+color: var(--color-wine);
+margin-bottom: 0.25rem;
+}
+
+.testimonial-location {
+font-size: 0.875rem;
+color: #666;
+}
+
+.testimonial-product {
+font-size: 0.875rem;
+font-weight: 500;
+color: #333;
+margin-bottom: 1rem;
+}
+
+.testimonial-text {
+position: relative;
+font-size: 1rem;
+line-height: 1.6;
+color: #333;
+padding-left: 1.5rem;
+}
+
+.testimonial-text::before {
+content: '"';
+position: absolute;
+left: 0;
+top: -0.5rem;
+font-size: 3rem;
+color: var(--color-wine);
+opacity: 0.3;
+line-height: 1;
+}
+
+.testimonials-dots {
+display: flex;
+justify-content: center;
+margin-top: 2rem;
+gap: 0.5rem;
+}
+
+.testimonials-dot {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: rgba(50, 0, 0, 0.2);
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.testimonials-dot.active {
+background-color: var(--color-wine);
+}
+
+.testimonials-nav {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 40px;
+height: 40px;
+background-color: var(--color-white);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+z-index: 10;
+}
+
+.testimonials-nav.prev {
+left: 1rem;
+}
+
+.testimonials-nav.next {
+right: 1rem;
+}
+
+/* About Section */
+.about-section {
+background: #F6F6F5;
+}
+
+.about-container {
+display: flex;
+flex-direction: column;
+gap: 2rem;
+}
+
+.about-video {
+position: relative;
+width: 100%;
+aspect-ratio: 1 / 1;
+overflow: hidden;
+border: 1px solid rgba(50, 0, 0, 0.3);
+opacity: 0;
+transform: translateX(-30px);
+transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.about-video.visible {
+opacity: 1;
+transform: translateX(0);
+}
+
+.about-video video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.about-content {
+opacity: 0;
+transform: translateX(30px);
+transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.about-content.visible {
+opacity: 1;
+transform: translateX(0);
+}
+
+.about-title {
+font-size: 2rem;
+margin-bottom: 1rem;
+color: var(--color-wine);
+}
+
+.about-text {
+color: var(--color-wine);
+margin-bottom: 1rem;
+}
+
+/* FAQ Section */
+.faq-container {
+max-width: 48rem;
+margin: 0 auto;
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.faq-container.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+.accordion {
+border-bottom: 1px solid rgba(50, 0, 0, 0.2);
+}
+
+.accordion-item {
+border-top: 1px solid rgba(50, 0, 0, 0.2);
+padding: 0.5rem 0;
+}
+
+.accordion-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+text-align: left;
+background: none;
+border: none;
+padding: 1rem 0;
+cursor: pointer;
+font-size: 1.125rem;
+font-weight: 500;
+transition: color 0.3s;
+color: var(--color-wine);
+}
+
+.accordion-header:hover {
+opacity: 0.8;
+}
+
+.accordion-icon {
+transition: transform 0.3s ease;
+color: var(--color-wine);
+}
+
+.accordion-header[aria-expanded="true"] .accordion-icon {
+transform: rotate(180deg);
+}
+
+.accordion-content {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.3s ease;
+text-align: left;
+}
+
+.accordion-content-inner {
+padding: 0 0 1rem;
+color: var(--color-wine);
+}
+
+/* Footer */
+.footer {
+padding: 2rem 1rem;
+border-top: 1px solid rgba(255, 255, 255, 0.2);
+text-align: center;
+background-color: var(--color-wine);
+color: var(--color-white);
+}
+
+.footer-logo {
+font-size: 1.5rem;
+margin-bottom: 1.5rem;
+}
+
+.footer-logo-img {
+height: 50px;
+margin: 0 auto 1rem;
+display: block;
+}
+
+.copyright {
+color: var(--color-white);
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+position: fixed;
+bottom: 1.5rem;
+right: 1.5rem;
+z-index: 50;
+width: 60px;
+height: 60px;
+border-radius: 50%;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+opacity: 1;
+transform: translateY(0);
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #25D366;
+animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+0% {
+  box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+}
+70% {
+  box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+}
+100% {
+  box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+}
+}
+
+.whatsapp-btn:hover {
+transform: scale(1.05);
+}
+
+/* Correção para o título "Perguntas Frequentes" */
+#faq .section-title {
+white-space: nowrap !important;
+display: inline-block;
+width: 100%;
+font-size: 1.8rem;
+text-align: center;
+}
+
+/* Modal de produto */
+.product-modal {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.8);
+z-index: 100;
+display: flex;
+align-items: center;
+justify-content: center;
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.3s, visibility 0.3s;
+}
+
+.product-modal.active {
+opacity: 1;
+visibility: visible;
+}
+
+.modal-content {
+background-color: var(--color-white);
+width: 90%;
+max-width: 800px;
+max-height: 90vh;
+overflow-y: auto;
+border-radius: 8px;
+position: relative;
+}
+
+.modal-close {
+position: absolute;
+top: 1rem;
+right: 1rem;
+background: var(--color-wine);
+color: var(--color-white);
+width: 30px;
+height: 30px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+z-index: 10;
+}
+
+.modal-image {
+width: 100%;
+height: auto;
+max-height: 60vh;
+object-fit: contain;
+}
+
+.modal-details {
+padding: 1.5rem;
+color: #000;
+}
+
+.modal-title {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+color: #000;
+}
+
+.modal-description {
+margin-bottom: 1rem;
+color: #333;
+}
+
+.modal-price {
+font-size: 1.75rem;
+font-weight: 700;
+margin-bottom: 1.5rem;
+color: #000;
+}
+
+.modal-buy {
+display: inline-block;
+padding: 0.75rem 2rem;
+background-color: var(--color-wine);
+color: var(--color-white);
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-weight: 500;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+.header-container {
+  padding: 1rem 2rem;
+}
+
+.logo {
+  height: 50px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu.active {
+  position: static;
+  flex-direction: row;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* Hero para desktop */
+.desktop-banner-carousel {
+  display: block;
+}
+
+.mobile-banner-carousel {
+  display: none;
+}
+
+.section-title {
+  font-size: 2.5rem;
+}
+
+#faq .section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  flex: 0 0 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
+}
+
+.about-container {
+  flex-direction: row;
+  align-items: center;
+}
+
+.about-video, .about-content {
+  width: 50%;
+}
+
+.about-video {
+  aspect-ratio: 3 / 4;
+}
+
+.modal-content {
+  display: flex;
+  max-height: 80vh;
+}
+
+.modal-image-container {
+  flex: 1;
+  max-width: 50%;
+}
+
+.modal-details {
+  flex: 1;
+  max-width: 50%;
+  padding: 2rem;
+}
+
+.testimonial-item {
+  flex: 0 0 50%;
+}
+
+.mini-carousel-item {
+  flex: 0 0 33.333%;
+}
+}
+
+@media (min-width: 1024px) {
+.carousel-item {
+  flex: 0 0 calc(25% - 1rem);
+  max-width: calc(25% - 1rem);
+}
+
+.testimonial-item {
+  flex: 0 0 33.333%;
+}
+}
+
+/* Ajuste para reduzir a altura dos carrosséis no modo celular */
+@media (max-width: 767px) {
+.copyright {
+  font-size: 0.8rem;
+}
+
+.collection-image {
+  aspect-ratio: 1 / 0.8; /* Reduzindo a altura da imagem */
+}
+
+.product-info {
+  padding: 0.75rem;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.product-rating {
+  margin-bottom: 0.3rem;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.product-btn {
+  padding: 0.5rem;
+}
+
+/* Reduzir altura da seção de depoimentos no mobile */
+.testimonials-section {
+  padding: 2.5rem 0;
+}
+
+.testimonial-card {
+  padding: 1rem;
+}
+
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+}
+
+.testimonial-text {
+  font-size: 0.9rem;
+}
+
+/* Correções para mobile */
+.carousel-container {
+  width: 100%;
+  overflow-x: visible;
+  padding: 0;
+}
+
+.carousel {
+  width: 100%;
+  padding: 0;
+}
+
+.carousel-item {
+  flex: 0 0 80%;
+  max-width: 80%;
+  margin-right: 1rem;
+}
+}
+</style>
+</head>
+<body>
+<!-- Header -->
+<header>
+<div class="container header-container">
+  <div class="logo">
+      <img src="https://i.imgur.com/IJsZyV9.png" alt="Kállis Pedras Naturais">
+  </div>
+  <!-- Modificar o menu para incluir as três linhas de produtos -->
+  <nav class="nav-menu" id="nav-menu">
+      <a href="#colecao" class="font-light">Coleção</a>
+      <a href="#escapulario" class="font-light" style="padding-left: 1rem;">Escapulário Energético</a>
+      <a href="#exclusive" class="font-light" style="padding-left: 1rem;">Linha Exclusive</a>
+      <a href="#premium" class="font-light" style="padding-left: 1rem;">Colares Premium</a>
+      <a href="#depoimentos" class="font-light">Depoimentos</a>
+      <a href="#sobre" class="font-light">Sobre</a>
+      <a href="#faq" class="font-light">FAQ</a>
+  </nav>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+  </button>
+</div>
+</header>
+
+<!-- Hero Section - MODIFICADA -->
+<section class="hero">
+  <!-- Banner para Mobile - ATUALIZADO COM CARROSSEL -->
+  <div class="banner-carousel mobile-banner-carousel" id="mobile-banner-carousel">
+    <div class="banner-track" id="mobile-banner-track">
+      <div class="banner-item">
+        <img src="https://i.imgur.com/dGzBEcM.png" alt="Banner Mobile 1">
+      </div>
+      <div class="banner-item">
+        <img src="https://i.imgur.com/34WSKa1.jpg" alt="Banner Mobile 2">
+      </div>
+    </div>
+    <div class="banner-dots" id="mobile-banner-dots">
+      <span class="banner-dot active" data-index="0"></span>
+      <span class="banner-dot" data-index="1"></span>
+    </div>
+    <div class="banner-nav prev" id="mobile-banner-prev">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#320000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </div>
+    <div class="banner-nav next" id="mobile-banner-next">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#320000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </div>
+  </div>
+  
+  <!-- Banner para Desktop - ATUALIZADO COM CARROSSEL -->
+  <div class="banner-carousel desktop-banner-carousel" id="desktop-banner-carousel">
+    <div class="banner-track" id="desktop-banner-track">
+      <div class="banner-item">
+        <img src="https://i.imgur.com/0H4rc3o.jpg" alt="Banner Desktop 1">
+      </div>
+      <div class="banner-item">
+        <img src="https://i.imgur.com/89KxxHU.jpg" alt="Banner Desktop 2">
+      </div>
+    </div>
+    <div class="banner-dots" id="desktop-banner-dots">
+      <span class="banner-dot active" data-index="0"></span>
+      <span class="banner-dot" data-index="1"></span>
+    </div>
+    <div class="banner-nav prev" id="desktop-banner-prev">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#320000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </div>
+    <div class="banner-nav next" id="desktop-banner-next">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#320000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- Mini Carousel Section -->
+<section class="mini-carousel-section">
+<div class="mini-carousel-container" id="mini-carousel-container">
+  <!-- Item 1 -->
+  <div class="mini-carousel-item">
+      <div class="mini-carousel-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#320000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+      </div>
+      <div class="mini-carousel-content">
+          <h3 class="mini-carousel-title">Garantia de Qualidade</h3>
+          <p class="mini-carousel-text">Todas as peças possuem garantia de 90 dias</p>
+      </div>
+  </div>
+  
+  <!-- Item 2 -->
+  <div class="mini-carousel-item">
+      <div class="mini-carousel-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#320000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+      </div>
+      <div class="mini-carousel-content">
+          <h3 class="mini-carousel-title">Materiais Premium</h3>
+          <p class="mini-carousel-text">Pedras naturais autênticas e materiais de alta qualidade</p>
+      </div>
+  </div>
+  
+  <!-- Item 3 -->
+  <div class="mini-carousel-item">
+      <div class="mini-carousel-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#320000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+              <line x1="1" y1="10" x2="23" y2="10"></line>
+          </svg>
+      </div>
+      <div class="mini-carousel-content">
+          <h3 class="mini-carousel-title">Pagamento Facilitado</h3>
+          <p class="mini-carousel-text">PIX e cartões em até 12x sem juros</p>
+      </div>
+  </div>
+</div>
+
+<button class="mini-carousel-nav prev" id="mini-carousel-prev">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#320000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"></polyline>
+  </svg>
+</button>
+<button class="mini-carousel-nav next" id="mini-carousel-next">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#320000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</button>
+</section>
+
+<!-- Collection Section -->
+<section id="colecao" class="section">
+<div class="container">
+  <h2 class="section-title font-serif" data-animate="title">Nossa Coleção</h2>
+  
+  <!-- Linha Escapulário Energético -->
+  <div class="collection-line" data-animate="grid" id="escapulario">
+      <h3 class="line-title font-serif">Linha Escapulário Energético</h3>
+      <div class="carousel-container">
+          <div class="carousel" id="carousel-escapulario">
+              <!-- Item 1 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/6cSC6Bt.jpg" alt="Escapulário 1">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Escapulário Energético - Cristal com Quartzo Verde e Fluorita</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(1)</span>
+                      </div>
+                      <div class="product-price">R$ 99,99</div>
+                      <button class="product-btn" data-product="escapulario-1">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 2 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/Y491bRN.jpg" alt="Escapulário 2">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Escapulário Energético - Cristal com Fluorita</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(2)</span>
+                      </div>
+                      <div class="product-price">R$ 99,99</div>
+                      <button class="product-btn" data-product="escapulario-2">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 3 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/Wsnr7iL.jpg" alt="Escapulário 3">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Escapulário Energético - Citrino</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(3)</span>
+                      </div>
+                      <div class="product-price">R$ 99,99</div>
+                      <button class="product-btn" data-product="escapulario-3">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 4 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/tn4MGpX.jpg" alt="Escapulário 4">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Escapulário Energético - Cristal com Fluorita</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(4)</span>
+                      </div>
+                      <div class="product-price">R$ 99,99</div>
+                      <button class="product-btn" data-product="escapulario-4">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 5 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/xwtcHeF.jpg" alt="Escapulário 5">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Escapulário Energético - Quartzo Rosa com Fluorita</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(5)</span>
+                      </div>
+                      <div class="product-price">R$ 99,99</div>
+                      <button class="product-btn" data-product="escapulario-5">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 6 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/OhbDMqz.jpg" alt="Escapulário 6">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Escapulário Energético Quartzo Rosa com Quartzo Verde</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(3)</span>
+                      </div>
+                      <div class="product-price">R$ 99,99</div>
+                      <button class="product-btn" data-product="escapulario-6">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 7 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img class="grayscale-img" src="https://i.imgur.com/lD1G6Gx.jpg" alt="Escapulário 7">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Escapulário Energético Só Turquesa</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(7)</span>
+                      </div>
+                      <div class="product-price">R$ 99,99</div>
+                      <button class="product-btn sold-btn">VENDIDO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 8 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/Zaej1WH.jpg" alt="Escapulário 8">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Escapulário Energético - Só Quartzo Rosa</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(2)</span>
+                      </div>
+                      <div class="product-price">R$ 99,99</div>
+                      <button class="product-btn" data-product="escapulario-8">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 9 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/ULKYVCJ.jpg" alt="Escapulário 9">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Escapulário Energético Cristal com Ametista</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(6)</span>
+                      </div>
+                      <div class="product-price">R$ 99,99</div>
+                      <button class="product-btn" data-product="escapulario-9">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 10 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img class="grayscale-img" src="https://i.imgur.com/QlcwNxm.jpg" alt="Escapulário 10">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Escapulário Energético Cristal</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(4)</span>
+                      </div>
+                      <div class="product-price">R$ 99,99</div>
+                      <button class="product-btn sold-btn">VENDIDO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 11 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/e7zT33B.jpg" alt="Escapulário 11">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Cristal de Rosa com Quartzo Rosa</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(3)</span>
+                      </div>
+                      <div class="product-price">R$ 99,99</div>
+                      <button class="product-btn" data-product="escapulario-11">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 12 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img class="grayscale-img" src="https://i.imgur.com/0jEUIeX.jpg" alt="Escapulário 12">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Escapulário Energético Quartzo Verde com Citrino</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(5)</span>
+                      </div>
+                      <div class="product-price">R$ 99,99</div>
+                      <button class="product-btn sold-btn">VENDIDO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 13 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/rjKoFCn.jpg" alt="Escapulário 13">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Escapulário Energético Quartzo Rosa com Ametista</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(2)</span>
+                      </div>
+                      <div class="product-price">R$ 99,99</div>
+                      <button class="product-btn" data-product="escapulario-13">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 14 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/e7zT33B.jpg" alt="Escapulário 14">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Cristal de Rosa com Quartzo Rosa</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(4)</span>
+                      </div>
+                      <div class="product-price">R$ 99,99</div>
+                      <button class="product-btn" data-product="escapulario-14">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 15 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/Y2kmtxB.jpg" alt="Escapulário 15">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Escapulário Quartzo Rosa com Ametista</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(3)</span>
+                      </div>
+                      <div class="product-price">R$ 99,99</div>
+                      <button class="product-btn" data-product="escapulario-15">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 16 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/gW3GP0h.jpg" alt="Escapulário 16">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Escapulário Energético Cristal de Rosa com Quartzo Rosa</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(5)</span>
+                      </div>
+                      <div class="product-price">R$ 99,99</div>
+                      <button class="product-btn" data-product="escapulario-16">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 17 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/NH08iYO.jpg" alt="Escapulário 17">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Escapulário Energético Citrino com quartzo Verde</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(2)</span>
+                      </div>
+                      <div class="product-price">R$ 99,99</div>
+                      <button class="product-btn" data-product="escapulario-17">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 18 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/Trbl4oi.jpg" alt="Escapulário 18">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Quartzo Rosa com Citrino</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(6)</span>
+                      </div>
+                      <div class="product-price">R$ 99,99</div>
+                      <button class="product-btn" data-product="escapulario-18">VER PRODUTO</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <!-- Separador -->
+  <div class="section-divider"></div>
+  
+  <!-- Linha Exclusive -->
+  <div class="collection-line" data-animate="grid" id="exclusive">
+      <h3 class="line-title font-serif">Linha Exclusive</h3>
+      <div class="carousel-container">
+          <div class="carousel" id="carousel-exclusive">
+              <!-- Item 1 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/IDNIUvq.jpg" alt="Exclusive 1">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Ematita com Banho Prateado e Banho Dourado e Pedra Ametista</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(5)</span>
+                      </div>
+                      <div class="product-price">R$ 149,99</div>
+                      <button class="product-btn" data-product="exclusive-1">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 2 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/I6tUSm8.jpg" alt="Exclusive 2">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Ematita com Banho Prateado e Pedra Quartzo Verde</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(2)</span>
+                      </div>
+                      <div class="product-price">R$ 149,99</div>
+                      <button class="product-btn" data-product="exclusive-2">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 3 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/hqbcJnM.jpg" alt="Exclusive 3">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Ematita com Banho Prateado e Pedra Ametista</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(7)</span>
+                      </div>
+                      <div class="product-price">R$ 149,99</div>
+                      <button class="product-btn" data-product="exclusive-3">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 4 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/0MFNYmG.jpg" alt="Exclusive 4">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Colar de Pedras Naturais de Ametista</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(3)</span>
+                      </div>
+                      <div class="product-price">R$ 149,99</div>
+                      <button class="product-btn" data-product="exclusive-4">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 5 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/Xs0B7wn.jpg" alt="Exclusive 5">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Ematita com Banho Dourado e Pedra Quartzo Verde</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(4)</span>
+                      </div>
+                      <div class="product-price">R$ 149,99</div>
+                      <button class="product-btn" data-product="exclusive-5">VER PRODUTO</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <!-- Separador -->
+  <div class="section-divider"></div>
+  
+  <!-- Linha Colares Premium -->
+  <div class="collection-line" data-animate="grid" id="premium">
+      <h3 class="line-title font-serif">Linha Colares Premium</h3>
+      <div class="carousel-container">
+          <div class="carousel" id="carousel-premium">
+              <!-- Item 1 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/R6dj5rr.jpg" alt="Premium 1">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Quartzo Verde com Cristal</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(9)</span>
+                      </div>
+                      <div class="product-price">R$ 299,99</div>
+                      <button class="product-btn" data-product="premium-1">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 2 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/XQIByN4.jpg" alt="Premium 2">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Cristais com Quartzo Rosa</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(6)</span>
+                      </div>
+                      <div class="product-price">R$ 299,99</div>
+                      <button class="product-btn" data-product="premium-2">VER PRODUTO</button>
+                  </div>
+              </div>
+              
+              <!-- Item 3 -->
+              <div class="carousel-item">
+                  <div class="collection-image">
+                      <img src="https://i.imgur.com/QwD7um3.jpg" alt="Premium 3">
+                  </div>
+                  <div class="product-info">
+                      <h3 class="product-title">Colar Coral com Turquesa</h3>
+                      <div class="product-rating">
+                          <div class="stars">
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                              <span>★</span>
+                          </div>
+                          <span class="review-count">(4)</span>
+                      </div>
+                      <div class="product-price">R$ 299,99</div>
+                      <button class="product-btn" data-product="premium-3">VER PRODUTO</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="depoimentos" class="testimonials-section">
+<div class="testimonials-bg">
+  <img src="https://i.imgur.com/vjZqc4R.jpg" alt="Fundo de pedras naturais">
+</div>
+<div class="testimonials-container">
+  <h2 class="testimonials-title font-serif">Depoimentos de nossos clientes</h2>
+  
+  <div class="testimonials-carousel">
+      <div class="testimonials-track" id="testimonials-track">
+          <!-- Depoimento 1 -->
+          <div class="testimonial-item">
+              <div class="testimonial-card">
+                  <div class="testimonial-header">
+                      <div class="testimonial-avatar">
+                          <img src="https://i.imgur.com/0IzIFXi.jpg" alt="Maria Silva">
+                      </div>
+                      <div class="testimonial-info">
+                          <h3 class="testimonial-name">Maria Silva</h3>
+                          <p class="testimonial-location">Rio de Janeiro/RJ</p>
+                      </div>
+                  </div>
+                  <p class="testimonial-product">Comprou Escapulário Energético Quartzo Rosa</p>
+                  <p class="testimonial-text">Estou apaixonada pelo meu escapulário! A energia do quartzo rosa realmente trouxe mais amor para minha vida. A qualidade é impecável e o atendimento foi excelente. Recomendo muito!</p>
+              </div>
+          </div>
+          
+          <!-- Depoimento 2 -->
+          <div class="testimonial-item">
+              <div class="testimonial-card">
+                  <div class="testimonial-header">
+                      <div class="testimonial-avatar">
+                          <img src="https://i.imgur.com/MlD6xTN.jpg" alt="Joana Braga">
+                      </div>
+                      <div class="testimonial-info">
+                          <h3 class="testimonial-name">Joana Braga</h3>
+                          <p class="testimonial-location">São Paulo/SP</p>
+                      </div>
+                  </div>
+                  <p class="testimonial-product">Comprou Colar Exclusive Olho de Tigre</p>
+                  <p class="testimonial-text">Presenteei minha irmã com o colar de olho de tigre e ela adorou! A peça é ainda mais bonita pessoalmente e a energia é incrível. Já estamos pensando em comprar mais peças.</p>
+              </div>
+          </div>
+          
+          <!-- Depoimento 3 -->
+          <div class="testimonial-item">
+              <div class="testimonial-card">
+                  <div class="testimonial-header">
+                      <div class="testimonial-avatar">
+                          <img src="https://i.imgur.com/fRB2v0B.jpg" alt="Ana Oliveira">
+                      </div>
+                      <div class="testimonial-info">
+                          <h3 class="testimonial-name">Ana Oliveira</h3>
+                          <p class="testimonial-location">Belo Horizonte/MG</p>
+                      </div>
+                  </div>
+                  <p class="testimonial-product">Comprou Colar Premium Amazonita</p>
+                  <p class="testimonial-text">A amazonita é minha pedra favorita e esse colar superou todas as minhas expectativas! A energia é maravilhosa e a peça é muito elegante. Uso todos os dias e sempre recebo elogios.</p>
+              </div>
+          </div>
+          
+          <!-- Depoimento 4 -->
+          <div class="testimonial-item">
+              <div class="testimonial-card">
+                  <div class="testimonial-header">
+                      <div class="testimonial-avatar">
+                          <img src="https://i.imgur.com/HgJDLQJ.jpg" alt="Juliana Costa">
+                      </div>
+                      <div class="testimonial-info">
+                          <h3 class="testimonial-name">Juliana Costa</h3>
+                          <p class="testimonial-location">Brasília/DF</p>
+                      </div>
+                  </div>
+                  <p class="testimonial-product">Comprou Escapulário Energético Ametista</p>
+                  <p class="testimonial-text">Desde que comecei a usar o escapulário de ametista, sinto uma proteção incrível! A qualidade da pedra é excepcional e o acabamento é perfeito. Já indiquei para várias amigas!</p>
+              </div>
+          </div>
+          
+          <!-- Depoimento 5 -->
+          <div class="testimonial-item">
+              <div class="testimonial-card">
+                  <div class="testimonial-header">
+                      <div class="testimonial-avatar">
+                          <img src="https://i.imgur.com/EvZBk8x.jpg" alt="Roberta Almeida">
+                      </div>
+                      <div class="testimonial-info">
+                          <h3 class="testimonial-name">Roberta Almeida</h3>
+                          <p class="testimonial-location">Salvador/BA</p>
+                      </div>
+                  </div>
+                  <p class="testimonial-product">Comprou Colar Exclusive Jade</p>
+                  <p class="testimonial-text">Comprei o colar de jade para minha filha e ela ficou encantada! A pedra tem uma energia incrível e a qualidade da peça é impressionante. O atendimento foi excelente do início ao fim.</p>
+              </div>
+          </div>
+          
+          <!-- Depoimento 6 -->
+          <div class="testimonial-item">
+              <div class="testimonial-card">
+                  <div class="testimonial-header">
+                      <div class="testimonial-avatar">
+                          <img src="https://i.imgur.com/PhaVQyr.jpg" alt="Fernanda Santos">
+                      </div>
+                      <div class="testimonial-info">
+                          <h3 class="testimonial-name">Fernanda Santos</h3>
+                          <p class="testimonial-location">Recife/PE</p>
+                      </div>
+                  </div>
+                  <p class="testimonial-product">Comprou Colar Premium Lápis Lazúli</p>
+                  <p class="testimonial-text">O colar de lápis lazúli é simplesmente deslumbrante! A cor é vibrante e a energia é poderosa. Sinto uma conexão espiritual muito forte quando uso. Vale cada centavo investido!</p>
+              </div>
+          </div>
+      </div>
+      
+      <div class="testimonials-dots" id="testimonials-dots">
+          <span class="testimonials-dot active" data-index="0"></span>
+          <span class="testimonials-dot" data-index="1"></span>
+          <span class="testimonials-dot" data-index="2"></span>
+          <span class="testimonials-dot" data-index="3"></span>
+          <span class="testimonials-dot" data-index="4"></span>
+          <span class="testimonials-dot" data-index="5"></span>
+      </div>
+      
+      <div class="testimonials-nav prev" id="testimonials-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#320000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+      </div>
+      <div class="testimonials-nav next" id="testimonials-next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#320000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+      </div>
+  </div>
+</div>
+</section>
+
+<!-- About Section -->
+<section id="sobre" class="section about-section">
+<div class="container about-container">
+  <div class="about-video" data-animate="left">
+      <video src="https://i.imgur.com/5d08ei9.mp4" autoplay loop muted playsinline></video>
+  </div>
+  <!-- Adicionar botão "História Completa" na seção "Sobre Nós" -->
+  <div class="about-content" data-animate="right">
+      <h2 class="about-title font-serif">Sobre Nós</h2>
+      <p class="about-text font-light">
+          A CS Kállis é uma marca criada para mulheres que buscam beleza, elegância e poder, ao mesmo tempo em que valorizam a conexão com a natureza e os benefícios das pedras naturais. Cada peça é uma afirmação de autoconfiança, uma extensão do poder interior da mulher moderna. Nossa missão é oferecer mais do que joias – queremos proporcionar experiências transformadoras através de peças que unem luxo e intencionalidade.
+      </p>
+      <p class="about-text font-light">
+          A CS Kállis acredita que cada mulher tem um poder único. Por isso, oferecemos peças feitas manual e exclusivamente, com pedras que refletem a energia do universo, permitindo que você expresse sua verdadeira essência, enquanto se conecta com o que há de mais puro e belo.
+      </p>
+      <button class="product-btn historia-btn" style="width: auto; display: inline-block; padding: 0.5rem 1rem; margin-top: 1rem;">HISTÓRIA COMPLETA</button>
+  </div>
+</div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="section">
+<div class="container">
+  <h2 class="section-title font-serif" style="white-space: nowrap;" data-animate="title">Perguntas Frequentes</h2>
+  
+  <div class="faq-container" data-animate="fade">
+      <div class="accordion">
+          <!-- FAQ Item 1 -->
+          <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                  <span>Como são confeccionadas as semi-joias com pedras naturais?</span>
+                  <span class="accordion-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                  </span>
+              </button>
+              <div class="accordion-content">
+                  <div class="accordion-content-inner font-light">
+                      Nossas peças são feitas à mão por artesãs especializadas, garantindo exclusividade e peças únicas.
+                  </div>
+              </div>
+          </div>
+          
+          <!-- FAQ Item 2 -->
+          <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                  <span>O que são pedras naturais? Elas são verdadeiras?</span>
+                  <span class="accordion-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                  </span>
+              </button>
+              <div class="accordion-content">
+                  <div class="accordion-content-inner font-light">
+                      Sim, todas as pedras utilizadas em nossas peças são 100% naturais, cuidadosamente escolhidas para garantir qualidade e autenticidade.
+                  </div>
+              </div>
+          </div>
+          
+          <!-- FAQ Item 3 -->
+          <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                  <span>As peças têm garantia?</span>
+                  <span class="accordion-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                  </span>
+              </button>
+              <div class="accordion-content">
+                  <div class="accordion-content-inner font-light">
+                      Sim, todas as peças possuem garantia de 90 dias contra defeitos de fabricação.
+                  </div>
+              </div>
+          </div>
+          
+          <!-- FAQ Item 4 -->
+          <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                  <span>Quanto tempo dura uma semi-joia com pedras naturais?</span>
+                  <span class="accordion-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                  </span>
+              </button>
+              <div class="accordion-content">
+                  <div class="accordion-content-inner font-light">
+                      A durabilidade depende do cuidado com a peça. Recomendamos evitar contato com água do mar, perfumes, e suor excessivo, pois isso pode afetar a cor e a qualidade das pedras.
+                  </div>
+              </div>
+          </div>
+          
+          <!-- FAQ Item 5 -->
+          <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                  <span>Como cuidar e guardar minha semi-joia?</span>
+                  <span class="accordion-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                  </span>
+              </button>
+              <div class="accordion-content">
+                  <div class="accordion-content-inner font-light">
+                      Guarde em um lugar seco e protegido. Evite o contato com água, produtos de limpeza ou perfumes.
+                  </div>
+              </div>
+          </div>
+          
+          <!-- FAQ Item 6 -->
+          <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                  <span>As pedras podem mudar de cor com o tempo?</span>
+                  <span class="accordion-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                  </span>
+              </button>
+              <div class="accordion-content">
+                  <div class="accordion-content-inner font-light">
+                      Embora as pedras naturais sejam duráveis, algumas podem sofrer alterações na cor devido ao uso inadequado. Cuide bem da sua peça para garantir sua longa durabilidade.
+                  </div>
+              </div>
+          </div>
+          
+          <!-- FAQ Item 7 -->
+          <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                  <span>Posso tomar banho ou entrar no mar com a peça?</span>
+                  <span class="accordion-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                  </span>
+              </button>
+              <div class="accordion-content">
+                  <div class="accordion-content-inner font-light">
+                      Não. Para garantir a preservação da qualidade das pedras, evite o contato com a água, especialmente a do mar.
+                  </div>
+              </div>
+          </div>
+          
+          <!-- FAQ Item 8 -->
+          <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                  <span>Qual é o material da base da semi-joia?</span>
+                  <span class="accordion-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                  </span>
+              </button>
+              <div class="accordion-content">
+                  <div class="accordion-content-inner font-light">
+                      A base dos colares é feita de ematitas e pedras naturais, com banho de dourado ou prateado, dependendo da peça.
+                  </div>
+              </div>
+          </div>
+          
+          <!-- FAQ Item 9 -->
+          <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                  <span>E se a minha peça vier com defeito?</span>
+                  <span class="accordion-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                  </span>
+              </button>
+              <div class="accordion-content">
+                  <div class="accordion-content-inner font-light">
+                      Se a peça apresentar defeito de fabricação, faremos a troca imediata.
+                  </div>
+              </div>
+          </div>
+          
+          <!-- FAQ Item 10 -->
+          <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                  <span>Vocês fazem peças personalizadas?</span>
+                  <span class="accordion-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                  </span>
+              </button>
+              <div class="accordion-content">
+                  <div class="accordion-content-inner font-light">
+                      Sim, todas as peças são personalizadas e feitas manualmente, o que garante um toque único e exclusivo para cada cliente.
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+  <!-- Adicionando a logo acima dos ícones sociais -->
+  <img src="https://i.imgur.com/IJsZyV9.png" alt="Kállis Pedras Naturais" class="footer-logo-img">
+  <p class="copyright font-light">© <span id="current-year"></span> Kállis Pedras Naturais. Todos os direitos reservados.</p>
+</div>
+</footer>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/5551992599848" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" id="whatsapp-btn">
+<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M28.9993 4.95C25.8993 1.85 21.6993 0 17.2993 0C7.79932 0 0.0993249 7.7 0.0993249 17.2C0.0993249 20.2 0.899325 23.2 2.39932 25.8L0.0993249 34L8.49932 31.7C10.9993 33.1 14.0993 33.8 17.2993 33.8C26.7993 33.8 34.4993 26.1 34.4993 16.6C34.4993 12.2 32.0993 8 28.9993 4.95ZM17.2993 30.9C14.6993 30.9 12.0993 30.2 9.89932 28.9L9.39932 28.6L4.09932 30L5.49932 24.8L5.09932 24.3C3.69932 22 2.99932 19.6 2.99932 17.2C2.99932 9.3 9.39932 2.9 17.2993 2.9C20.9993 2.9 24.3993 4.4 26.9993 7C29.5993 9.6 31.0993 13 31.0993 16.7C31.0993 24.6 24.6993 30.9 17.2993 30.9ZM25.0993 20.8C24.6993 20.6 22.5993 19.6 22.1993 19.4C21.7993 19.3 21.4993 19.2 21.1993 19.6C20.8993 20 20.0993 20.9 19.8993 21.2C19.6993 21.5 19.4993 21.5 19.0993 21.3C18.6993 21.1 17.2993 20.6 15.6993 19.2C14.3993 18.1 13.5993 16.7 13.3993 16.3C13.1993 15.9 13.3993 15.7 13.5993 15.5C13.7993 15.3 13.9993 15 14.1993 14.8C14.3993 14.6 14.4993 14.4 14.5993 14.1C14.6993 13.8 14.5993 13.6 14.4993 13.4C14.3993 13.2 13.5993 11.1 13.1993 10.3C12.7993 9.5 12.3993 9.6 12.1993 9.6C11.9993 9.6 11.6993 9.6 11.3993 9.6C11.0993 9.6 10.5993 9.7 10.1993 10.1C9.79932 10.5 8.69932 11.5 8.69932 13.6C8.69932 15.7 10.1993 17.7 10.3993 18C10.5993 18.3 13.5993 22.8 17.9993 24.7C18.9993 25.1 19.7993 25.4 20.3993 25.6C21.3993 25.9 22.2993 25.9 22.9993 25.8C23.7993 25.7 25.4993 24.8 25.8993 23.9C26.2993 23 26.2993 22.2 26.1993 22.1C26.0993 22 25.7993 21.9 25.0993 21.7V20.8Z" fill="#FFFFFF"/>
+</svg>
+</a>
+
+<!-- Modal de Produto -->
+<div class="product-modal" id="product-modal">
+<div class="modal-content">
+  <div class="modal-close" id="modal-close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+  </div>
+  <div class="modal-image-container">
+      <img src="/placeholder.svg" alt="Produto" class="modal-image" id="modal-image">
+  </div>
+  <div class="modal-details">
+      <h2 class="modal-title" id="modal-title"></h2>
+      <div class="modal-description" id="modal-description"></div>
+      <div class="modal-price" id="modal-price"></div>
+      <a href="https://wa.me/5551992599848" target="_blank" rel="noopener noreferrer" class="modal-buy" id="modal-buy-btn">COMPRAR AGORA</a>
+  </div>
+</div>
+</div>
+
+<!-- Adicionar modal para a História Completa -->
+<!-- Modal de História Completa -->
+<div class="product-modal" id="historia-modal">
+<div class="modal-content">
+  <div class="modal-close" id="historia-modal-close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+  </div>
+  <div class="modal-details" style="max-width: 100%; padding: 2rem;">
+      <h2 class="modal-title">Nossa História Completa</h2>
+      <div class="modal-description">
+          <p style="margin-bottom: 1rem;">A CS Kállis nasceu do sonho de unir a beleza das pedras naturais com a elegância das joias contemporâneas. Nossa jornada começou em 2018, quando nossa fundadora, apaixonada por mineralogia e design, decidiu transformar sua paixão em uma marca que representasse a força e a delicadeza da mulher moderna.</p>
+          
+          <p style="margin-bottom: 1rem;">Cada peça da CS Kállis é cuidadosamente elaborada por artesãs especializadas, que dedicam horas de trabalho para garantir que cada detalhe seja perfeito. Utilizamos apenas pedras naturais autênticas, selecionadas uma a uma para garantir sua qualidade e energia.</p>
+          
+          <p style="margin-bottom: 1rem;">Nossa filosofia é baseada na crença de que as pedras naturais carregam energias que podem influenciar positivamente a vida de quem as usa. Por isso, cada coleção é pensada não apenas em termos estéticos, mas também considerando as propriedades energéticas de cada pedra.
+          
+          <p style="margin-bottom: 1rem;">Ao longo dos anos, a CS Kállis cresceu e se tornou referência no mercado de semi-joias com pedras naturais, conquistando clientes em todo o Brasil. Nosso compromisso com a qualidade, autenticidade e atendimento personalizado nos permitiu construir uma comunidade de mulheres que compartilham nossa paixão por peças únicas e significativas.</p>
+          
+          <p>Hoje, continuamos a expandir nossa marca, sempre mantendo nossos valores originais: valorizar a beleza natural, respeitar a individualidade de cada mulher e oferecer peças que são mais do que acessórios – são símbolos de poder, elegância e conexão com a natureza.</p>
+      </div>
+  </div>
+</div>
+</div>
+
+<script>
+// Menu Toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+  
+  // Change menu icon
+  if (navMenu.classList.contains('active')) {
+      menuToggle.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+      `;
+  } else {
+      menuToggle.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+      `;
+  }
+});
+
+// Scroll suave para as seções ao clicar nos links do menu
+const navLinks = document.querySelectorAll('.nav-menu a');
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+      e.preventDefault(); // Previne o comportamento padrão
+      const targetId = link.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+      
+      if (targetSection) {
+          // Scroll suave para a seção
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+          
+          // Fecha o menu em dispositivos móveis
+          navMenu.classList.remove('active');
+          menuToggle.innerHTML = `
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="3" y1="12" x2="21" y2="12"></line>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+          `;
+      }
+  });
+});
+
+// Banner Carousels
+function setupBannerCarousel(id, trackId, dotsId, prevId, nextId) {
+  const carousel = document.getElementById(id);
+  const track = document.getElementById(trackId);
+  const items = track.querySelectorAll('.banner-item');
+  const dots = document.querySelectorAll(`#${dotsId} .banner-dot`);
+  const prevBtn = document.getElementById(prevId);
+  const nextBtn = document.getElementById(nextId);
+  let currentPosition = 0;
+  let autoplayInterval;
+  
+  function goToPosition(position) {
+      currentPosition = position;
+      track.style.transform = `translateX(-${currentPosition * 100}%)`;
+      
+      // Update dots
+      dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === currentPosition);
+      });
+  }
+  
+  function startAutoplay() {
+      stopAutoplay();
+      autoplayInterval = setInterval(() => {
+          if (currentPosition >= items.length - 1) {
+              goToPosition(0);
+          } else {
+              goToPosition(currentPosition + 1);
+          }
+      }, 5000);
+  }
+  
+  function stopAutoplay() {
+      if (autoplayInterval) {
+          clearInterval(autoplayInterval);
+      }
+  }
+  
+  // Event listeners
+  prevBtn.addEventListener('click', () => {
+      if (currentPosition > 0) {
+          goToPosition(currentPosition - 1);
+      } else {
+          goToPosition(items.length - 1);
+      }
+      stopAutoplay();
+      startAutoplay();
+  });
+  
+  nextBtn.addEventListener('click', () => {
+      if (currentPosition < items.length - 1) {
+          goToPosition(currentPosition + 1);
+      } else {
+          goToPosition(0);
+      }
+      stopAutoplay();
+      startAutoplay();
+  });
+  
+  dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+          goToPosition(index);
+          stopAutoplay();
+          startAutoplay();
+      });
+  });
+  
+  // Initialize
+  goToPosition(0);
+  startAutoplay();
+}
+
+// Mini Carousel
+function setupMiniCarousel() {
+  const container = document.getElementById('mini-carousel-container');
+  const items = container.querySelectorAll('.mini-carousel-item');
+  const prevBtn = document.getElementById('mini-carousel-prev');
+  const nextBtn = document.getElementById('mini-carousel-next');
+  let currentPosition = 0;
+  let autoplayInterval;
+  
+  // Set initial width based on screen size
+  function updateItemWidth() {
+      if (window.innerWidth >= 768) {
+          items.forEach(item => {
+              item.style.flex = '0 0 33.333%';
+          });
+      } else {
+          items.forEach(item => {
+              item.style.flex = '0 0 100%';
+          });
+      }
+      
+      // Update position
+      goToPosition(currentPosition);
+  }
+  
+  function goToPosition(position) {
+      currentPosition = position;
+      const itemWidth = window.innerWidth >= 768 ? 33.333 : 100;
+      container.style.transform = `translateX(-${currentPosition * itemWidth}%)`;
+  }
+  
+  function startAutoplay() {
+      stopAutoplay();
+      autoplayInterval = setInterval(() => {
+          const maxPosition = window.innerWidth >= 768 ? items.length - 3 : items.length - 1;
+          if (currentPosition >= maxPosition) {
+              // Loop back to start for infinite effect
+              goToPosition(0);
+          } else {
+              goToPosition(currentPosition + 1);
+          }
+      }, 4000);
+  }
+  
+  function stopAutoplay() {
+      if (autoplayInterval) {
+          clearInterval(autoplayInterval);
+      }
+  }
+  
+  // Event listeners
+  prevBtn.addEventListener('click', () => {
+      if (currentPosition > 0) {
+          goToPosition(currentPosition - 1);
+      } else {
+          // Loop to end for infinite effect
+          goToPosition(items.length - (window.innerWidth >= 768 ? 3 : 1));
+      }
+      stopAutoplay();
+      startAutoplay();
+  });
+  
+  nextBtn.addEventListener('click', () => {
+      const maxPosition = window.innerWidth >= 768 ? items.length - 3 : items.length - 1;
+      if (currentPosition < maxPosition) {
+          goToPosition(currentPosition + 1);
+      } else {
+          // Loop to start for infinite effect
+          goToPosition(0);
+      }
+      stopAutoplay();
+      startAutoplay();
+  });
+  
+  // Initialize
+  updateItemWidth();
+  startAutoplay();
+  
+  // Update on resize
+  window.addEventListener('resize', updateItemWidth);
+}
+
+// Accordion
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+accordionHeaders.forEach(header => {
+  header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      const isExpanded = header.getAttribute('aria-expanded') === 'true';
+      
+      // Close all accordions
+      accordionHeaders.forEach(item => {
+          item.setAttribute('aria-expanded', 'false');
+          item.nextElementSibling.style.maxHeight = '0';
+      });
+      
+      // Toggle current accordion
+      if (!isExpanded) {
+          header.setAttribute('aria-expanded', 'true');
+          content.style.maxHeight = content.scrollHeight + 'px';
+      }
+  });
+});
+
+// Testimonials Carousel
+function setupTestimonialsCarousel() {
+  const track = document.getElementById('testimonials-track');
+  const items = track.querySelectorAll('.testimonial-item');
+  const dots = document.querySelectorAll('.testimonials-dot');
+  const prevBtn = document.getElementById('testimonials-prev');
+  const nextBtn = document.getElementById('testimonials-next');
+  let currentPosition = 0;
+  let itemWidth = items[0].offsetWidth;
+  let maxPosition = items.length - 1;
+  let autoplayInterval;
+  
+  // Set initial width based on screen size
+  function updateItemWidth() {
+      if (window.innerWidth >= 1024) {
+          itemWidth = track.offsetWidth / 3;
+          maxPosition = items.length - 3;
+      } else if (window.innerWidth >= 768) {
+          itemWidth = track.offsetWidth / 2;
+          maxPosition = items.length - 2;
+      } else {
+          itemWidth = track.offsetWidth;
+          maxPosition = items.length - 1;
+      }
+      
+      items.forEach(item => {
+          item.style.flex = `0 0 ${itemWidth}px`;
+      });
+      
+      // Update position
+      goToPosition(currentPosition);
+  }
+  
+  function goToPosition(position) {
+      currentPosition = position;
+      track.style.transform = `translateX(-${currentPosition * itemWidth}px)`;
+      
+      // Update dots
+      dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === currentPosition);
+      });
+  }
+  
+  function startAutoplay() {
+      stopAutoplay();
+      autoplayInterval = setInterval(() => {
+          if (currentPosition >= maxPosition) {
+              // Loop back to start for infinite effect
+              goToPosition(0);
+          } else {
+              goToPosition(currentPosition + 1);
+          }
+      }, 5000);
+  }
+  
+  function stopAutoplay() {
+      if (autoplayInterval) {
+          clearInterval(autoplayInterval);
+      }
+  }
+  
+  // Event listeners
+  prevBtn.addEventListener('click', () => {
+      if (currentPosition > 0) {
+          goToPosition(currentPosition - 1);
+      } else {
+          // Loop to end for infinite effect
+          goToPosition(maxPosition);
+      }
+      stopAutoplay();
+      startAutoplay();
+  });
+  
+  nextBtn.addEventListener('click', () => {
+      if (currentPosition < maxPosition) {
+          goToPosition(currentPosition + 1);
+      } else {
+          // Loop to start for infinite effect
+          goToPosition(0);
+      }
+      stopAutoplay();
+      startAutoplay();
+  });
+  
+  dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+          goToPosition(index);
+          stopAutoplay();
+          startAutoplay();
+      });
+  });
+  
+  // Initialize
+  updateItemWidth();
+  startAutoplay();
+  
+  // Update on resize
+  window.addEventListener('resize', updateItemWidth);
+}
+
+// Carousels with touch support and mouse drag
+function setupCarousels() {
+  const carousels = document.querySelectorAll('.carousel');
+  
+  carousels.forEach(carousel => {
+      const id = carousel.id;
+      const container = carousel.closest('.carousel-container');
+      const items = carousel.querySelectorAll('.carousel-item');
+      let currentPosition = 0;
+      let itemWidth;
+      let visibleItems;
+      let maxPosition;
+      
+      // Function to update carousel dimensions
+      function updateCarouselDimensions() {
+          // For mobile view, show only one item at 80% width
+          if (window.innerWidth < 768) {
+              visibleItems = 1;
+              itemWidth = container.offsetWidth * 0.8;
+              items.forEach(item => {
+                  item.style.flex = '0 0 80%';
+                  item.style.maxWidth = '80%';
+              });
+          } else if (window.innerWidth >= 1024) {
+              visibleItems = 4;
+              itemWidth = (container.offsetWidth / 4) - 24; // Accounting for gap
+              items.forEach(item => {
+                  item.style.flex = `0 0 calc(25% - 1rem)`;
+                  item.style.maxWidth = `calc(25% - 1rem)`;
+              });
+          } else {
+              visibleItems = 3;
+              itemWidth = (container.offsetWidth / 3) - 24; // Accounting for gap
+              items.forEach(item => {
+                  item.style.flex = `0 0 calc(33.333% - 1rem)`;
+                  item.style.maxWidth = `calc(33.333% - 1rem)`;
+              });
+          }
+          
+          maxPosition = Math.max(0, items.length - visibleItems);
+          
+          // Reset position if needed
+          if (currentPosition > maxPosition) {
+              currentPosition = maxPosition;
+          }
+          
+          // Update carousel position
+          updateCarouselPosition();
+      }
+      
+      // Function to update carousel position
+      function updateCarouselPosition() {
+          if (window.innerWidth < 768) {
+              // For mobile, slide to the current item with offset to show part of next item
+              const offset = currentPosition * (itemWidth + 16); // 16px is the margin-right
+              carousel.style.transform = `translateX(-${offset}px)`;
+          } else {
+              // For desktop, account for the gap
+              const gapOffset = currentPosition * 16; // 1rem = 16px
+              carousel.style.transform = `translateX(-${(currentPosition * itemWidth) + gapOffset}px)`;
+          }
+      }
+      
+      // Set initial position
+      updateCarouselDimensions();
+      
+      // Touch events for swipe
+      let touchStartX = 0;
+      let touchEndX = 0;
+      
+      container.addEventListener('touchstart', (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      
+      container.addEventListener('touchend', (e) => {
+          touchEndX = e.changedTouches[0].screenX;
+          handleSwipe();
+      }, { passive: true });
+      
+      function handleSwipe() {
+          const swipeThreshold = 50;
+          if (touchEndX < touchStartX - swipeThreshold) {
+              // Swipe left - go next
+              if (currentPosition < maxPosition) {
+                  currentPosition++;
+                  updateCarouselPosition();
+              }
+          }
+          if (touchEndX > touchStartX + swipeThreshold) {
+              // Swipe right - go previous
+              if (currentPosition > 0) {
+                  currentPosition--;
+                  updateCarouselPosition();
+              }
+          }
+      }
+      
+      // Mouse drag events for desktop
+      let isDragging = false;
+      let startX = 0;
+      let scrollLeft = 0;
+      
+      container.addEventListener('mousedown', (e) => {
+          isDragging = true;
+          startX = e.pageX - container.offsetLeft;
+          scrollLeft = carousel.scrollLeft;
+          container.style.cursor = 'grabbing';
+      });
+      
+      container.addEventListener('mouseleave', () => {
+          isDragging = false;
+          container.style.cursor = 'grab';
+      });
+      
+      container.addEventListener('mouseup', () => {
+          isDragging = false;
+          container.style.cursor = 'grab';
+      });
+      
+      container.addEventListener('mousemove', (e) => {
+          if (!isDragging) return;
+          e.preventDefault();
+          const x = e.pageX - container.offsetLeft;
+          const walk = (x - startX) * 2; // Adjust scroll speed
+          
+          if (walk > 100 && currentPosition > 0) {
+              // Drag right - go previous
+              currentPosition--;
+              updateCarouselPosition();
+              isDragging = false;
+          } else if (walk < -100 && currentPosition < maxPosition) {
+              // Drag left - go next
+              currentPosition++;
+              updateCarouselPosition();
+              isDragging = false;
+          }
+      });
+      
+      // Update on window resize
+      window.addEventListener('resize', updateCarouselDimensions);
+  });
+}
+
+// Animations on scroll
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          const element = entry.target;
+          const animationType = element.getAttribute('data-animate');
+          
+          if (animationType === 'title' || animationType === 'fade' || animationType === 'left' || animationType === 'right') {
+              element.classList.add('visible');
+          } else if (animationType === 'grid') {
+              element.classList.add('visible');
+          }
+      }
+  });
+}
+
+// Set up Intersection Observer
+const observer = new IntersectionObserver(handleIntersection, {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1
+});
+
+// Observe all elements with data-animate attribute
+document.querySelectorAll('[data-animate]').forEach(element => {
+  observer.observe(element);
+});
+
+// Modal de produto
+const productModal = document.getElementById('product-modal');
+const modalClose = document.getElementById('modal-close');
+const modalImage = document.getElementById('modal-image');
+const modalTitle = document.getElementById('modal-title');
+const modalDescription = document.getElementById('modal-description');
+const modalPrice = document.getElementById('modal-price');
+const modalBuyBtn = document.getElementById('modal-buy-btn');
+
+// Dados dos produtos
+const productData = {
+'escapulario-1': {
+    title: 'Escapulário Energético - Cristal com Quartzo Verde e Fluorita',
+    image: 'https://i.imgur.com/6cSC6Bt.jpg',
+    description: 'Significado: O cristal amplifica energias positivas e traz clareza mental, enquanto o quartzo verde promove cura física e emocional, ajudando a restaurar o equilíbrio e vitalidade. A fluorita, por sua vez, é uma pedra de proteção espiritual e organização mental, que ajuda a limpar energias negativas e a fortalecer a mente. Juntas, essas pedras criam uma combinação poderosa de cura, clareza e proteção para seu bem-estar.\n\nRepresenta: Cura, clareza e equilíbrio. Um amuleto de proteção emocional e energia positiva.',
+    price: 'R$ 99,99',
+    line: 'Linha Escapulário Energético'
+},
+'escapulario-2': {
+    title: 'Escapulário Energético - Cristal com Fluorita',
+    image: 'https://i.imgur.com/Y491bRN.jpg',
+    description: 'Significado: O cristal é conhecido por sua capacidade de amplificar energias positivas e promover clareza mental. Já a fluorita é uma pedra de proteção espiritual e equilíbrio emocional, sendo ideal para quem busca limpeza energética e organização mental. Juntas, essas pedras criam uma energia de purificação e equilíbrio, promovendo clareza e proteção.\n\nRepresenta: Clareza, proteção e equilíbrio mental. Um verdadeiro amuleto de purificação e organização, trazendo harmonia e bem-estar para sua vida.',
+    price: 'R$ 99,99',
+    line: 'Linha Escapulário Energético'
+},
+'escapulario-3': {
+    title: 'Escapulário Energético - Citrino',
+    image: 'https://i.imgur.com/Wsnr7iL.jpg',
+    description: 'Significado: O citrino é a pedra da prosperidade, abundância e vitalidade. Ideal para quem busca atrair sucesso financeiro e vitalidade emocional, além de impulsionar projetos e sonhos.\nRepresenta: Prosperidade e energia positiva.',
+    price: 'R$ 99,99',
+    line: 'Linha Escapulário Energético'
+},
+'escapulario-4': {
+    title: 'Escapulário Energético - Cristal com Fluorita',
+    image: 'https://i.imgur.com/tn4MGpX.jpg',
+    description: 'Significado: O cristal é conhecido por sua capacidade de amplificar energias positivas e promover clareza mental. Já a fluorita é uma pedra de proteção espiritual e equilíbrio emocional, sendo ideal para quem busca limpeza energética e organização mental. Juntas, essas pedras criam uma energia de purificação e equilíbrio, promovendo clareza e proteção.\n\nRepresenta: Clareza, proteção e equilíbrio mental. Um verdadeiro amuleto de purificação e organização, trazendo harmonia e bem-estar para sua vida.',
+    price: 'R$ 99,99',
+    line: 'Linha Escapulário Energético'
+},
+'escapulario-5': {
+    title: 'Escapulário Energético - Quartzo Rosa com Fluorita',
+    image: 'https://i.imgur.com/xwtcHeF.jpg',
+    description: 'Significado: O quartzo rosa é a pedra do amor incondicional e da cura emocional, conhecida por sua capacidade de trazer harmonia para as relações e suavizar o coração. Já a fluorita é uma pedra de proteção espiritual e equilíbrio mental, ajudando a limpar e organizar a mente, promovendo clareza.\n\nRepresenta: Amor, cura e equilíbrio emocional. Um verdadeiro amuleto de conexão e bem-estar.',
+    price: 'R$ 99,99',
+    line: 'Linha Escapulário Energético'
+},
+'escapulario-6': {
+    title: 'Escapulário Energético Quartzo Rosa com Quartzo Verde',
+    image: 'https://i.imgur.com/OhbDMqz.jpg',
+    description: 'Significado: O quartzo rosa, pedra do amor incondicional, traz cura emocional e fortalece os laços afetivos. O quartzo verde, por sua vez, é conhecido por suas poderosas propriedades de cura física e emocional, promovendo equilíbrio e renovação. Juntas, essas pedras criam uma harmonia perfeita para restaurar a paz interior e atrair amor e prosperidade em sua vida.\nRepresenta: Amor, cura e equilíbrio. Um amuleto de proteção emocional e energia positiva, que nutre a alma e traz renovação.',
+    price: 'R$ 99,99',
+    line: 'Linha Escapulário Energético'
+},
+'escapulario-7': {
+    title: 'Escapulário Energético Só Turquesa',
+    image: 'https://i.imgur.com/lD1G6Gx.jpg',
+    description: 'Significado: A turquesa é uma pedra de proteção, cura e equilíbrio emocional. Ela também é excelente para fortalecer a comunicação e as relações interpessoais, promovendo harmonia.\nRepresenta: Comunicação e equilíbrio emocional.',
+    price: 'R$ 99,99',
+    line: 'Linha Escapulário Energético'
+},
+'escapulario-8': {
+    title: 'Escapulário Energético - Só Quartzo Rosa',
+    image: 'https://i.imgur.com/Zaej1WH.jpg',
+    description: 'Significado: O quartzo rosa é a pedra do amor incondicional e da cura emocional. Ela é conhecida por sua capacidade de trazer harmonia para as relações, suavizando o coração e promovendo o perdão. Ao trabalhar as energias de afeto e carinho, o quartzo rosa abre caminhos para a paz interior e fortalece o autocuidado e o amor próprio.\nRepresenta: Amor, cura e serenidade. Um verdadeiro amuleto de conexão emocional, que traz equilíbrio e bem-estar para sua vida.',
+    price: 'R$ 99,99',
+    line: 'Linha Escapulário Energético'
+},
+'escapulario-9': {
+    title: 'Escapulário Energético Cristal com Ametista',
+    image: 'https://i.imgur.com/ULKYVCJ.jpg',
+    description: 'Significado: O cristal amplifica a energia positiva, enquanto a ametista proporciona proteção espiritual e claridade mental. Ideal para quem busca fortalecer sua intuição e transformar desafios em oportunidades.\nRepresenta: Clareza e proteção.',
+    price: 'R$ 99,99',
+    line: 'Linha Escapulário Energético'
+},
+'escapulario-10': {
+    title: 'Escapulário Energético Cristal',
+    image: 'https://i.imgur.com/QlcwNxm.jpg',
+    description: 'Significado: O cristal é a pedra da purificação e amplificação de energia positiva, ideal para quem busca clareza mental e equilíbrio espiritual. Ele transforma o ambiente ao seu redor, trazendo energia positiva.\nRepresenta: Clareza e energia pura.',
+    price: 'R$ 99,99',
+    line: 'Linha Escapulário Energético'
+},
+'escapulario-11': {
+    title: 'Cristal de Rosa com Quartzo Rosa',
+    image: 'https://i.imgur.com/e7zT33B.jpg',
+    description: 'Significado: O cristal de rosa simboliza o amor universal, enquanto o quartzo rosa amplifica as energias do afeto e da cura emocional. Perfeito para quem deseja atrair amor e harmonia em sua vida.\nRepresenta: Amor e equilíbrio emocional.',
+    price: 'R$ 99,99',
+    line: 'Linha Escapulário Energético'
+},
+'escapulario-12': {
+    title: 'Escapulário Energético Quartzo Verde com Citrino',
+    image: 'https://i.imgur.com/0jEUIeX.jpg',
+    description: 'Significado: O quartzo verde traz cura física e emocional, enquanto o citrino revitaliza com energia positiva. Juntas, essas pedras ajudam a alavancar a saúde e trazer abundância para a vida.\nRepresenta: Cura e prosperidade.',
+    price: 'R$ 99,99',
+    line: 'Linha Escapulário Energético'
+},
+'escapulario-13': {
+    title: 'Escapulário Energético Quartzo Rosa com Ametista',
+    image: 'https://i.imgur.com/rjKoFCn.jpg',
+    description: 'Significado: O quartzo rosa é símbolo de amor incondicional, e a ametista promove a espiritualidade e a paz interior. Juntas, essas pedras criam uma forte energia de cura emocional e equilíbrio mental.\nRepresenta: Amor e serenidade.',
+    price: 'R$ 99,99',
+    line: 'Linha Escapulário Energético'
+},
+'escapulario-14': {
+    title: 'Cristal de Rosa com Quartzo Rosa',
+    image: 'https://i.imgur.com/e7zT33B.jpg',
+    description: 'Significado: O cristal de rosa simboliza o amor universal, enquanto o quartzo rosa amplifica as energias do afeto e da cura emocional. Perfeito para quem deseja atrair amor e harmonia em sua vida.\nRepresenta: Amor e equilíbrio emocional.',
+    price: 'R$ 99,99',
+    line: 'Linha Escapulário Energético'
+},
+'escapulario-15': {
+    title: 'Escapulário Quartzo Rosa com Ametista',
+    image: 'https://i.imgur.com/Y2kmtxB.jpg',
+    description: 'Significado: O quartzo rosa é símbolo de amor incondicional, e a ametista promove a espiritualidade e a paz interior. Juntas, essas pedras criam uma forte energia de cura emocional e equilíbrio mental.\nRepresenta: Amor e serenidade.',
+    price: 'R$ 99,99',
+    line: 'Linha Escapulário Energético'
+},
+'escapulario-16': {
+    title: 'Escapulário Energético Cristal de Rosa com Quartzo Rosa',
+    image: 'https://i.imgur.com/gW3GP0h.jpg',
+    description: 'Significado: O cristal de rosa simboliza o amor universal, enquanto o quartzo rosa amplifica as energias do afeto e da cura emocional. Perfeito para quem deseja atrair amor e harmonia em sua vida.\nRepresenta: Amor e equilíbrio emocional.',
+    price: 'R$ 99,99',
+    line: 'Linha Escapulário Energético'
+},
+'escapulario-17': {
+    title: 'Escapulário Energético Citrino com quartzo Verde',
+    image: 'https://i.imgur.com/NH08iYO.jpg',
+    description: 'Significado: O quartzo verde traz cura física e emocional, enquanto o citrino revitaliza com energia positiva. Juntas, essas pedras ajudam a alavancar a saúde e trazer abundância para a vida.\nRepresenta: Cura e prosperidade.',
+    price: 'R$ 99,99',
+    line: 'Linha Escapulário Energético'
+},
+'escapulario-18': {
+    title: 'Quartzo Rosa com Citrino',
+    image: 'https://i.imgur.com/Trbl4oi.jpg',
+    description: 'Significado: O quartzo rosa é a pedra do amor incondicional e da cura emocional, enquanto o citrino traz prosperidade e energia positiva. Juntas, essas pedras criam um equilíbrio perfeito entre amor próprio e abundância.\nRepresenta: Harmonia e novas oportunidades.',
+    price: 'R$ 99,99',
+    line: 'Linha Escapulário Energético'
+},
+'exclusive-1': {
+    title: 'Ematita com Banho Prateado e Banho Dourado e Pedra Ametista',
+    image: 'https://i.imgur.com/IDNIUvq.jpg',
+    description: 'Significado: A ematita oferece proteção e enraizamento, enquanto a ametista eleva a espiritualidade e a paz interior. O banho prateado confere elegância e suavidade, promovendo uma conexão profunda com sua essência espiritual.\nRepresenta: Força, equilíbrio e serenidade.',
+    price: 'R$ 149,99',
+    line: 'Linha Exclusive'
+},
+'exclusive-2': {
+    title: 'Ematita com Banho Prateado e Pedra Quartzo Verde',
+    image: 'https://i.imgur.com/I6tUSm8.jpg',
+    description: 'Significado: A ematita traz proteção física e emocional, enquanto o quartzo verde é uma pedra de cura e renovação. O banho prateado adiciona elegância e leveza, criando uma harmonia entre equilíbrio e cura.\nRepresenta: Cura, proteção e renovação.',
+    price: 'R$ 149,99',
+    line: 'Linha Exclusive'
+},
+'exclusive-3': {
+    title: 'Ematita com Banho Prateado e Pedra Ametista',
+    image: 'https://i.imgur.com/hqbcJnM.jpg',
+    description: 'Significado: A ematita oferece proteção e enraizamento, enquanto a ametista eleva a espiritualidade e a paz interior. O banho prateado confere elegância e suavidade, promovendo uma conexão profunda com sua essência espiritual.\nRepresenta: Força, equilíbrio e serenidade.',
+    price: 'R$ 149,99',
+    line: 'Linha Exclusive'
+},
+'exclusive-4': {
+    title: 'Colar de Pedras Naturais de Ametista',
+    image: 'https://i.imgur.com/0MFNYmG.jpg',
+    description: 'Significado: A ametista é a pedra da proteção espiritual e da clareza mental, conhecida por ajudar a aliviar o estresse e abrir caminhos para crescimento espiritual e equilíbrio emocional.\nRepresenta: Clareza, proteção e transformação.',
+    price: 'R$ 149,99',
+    line: 'Linha Exclusive'
+},
+'exclusive-5': {
+    title: 'Ematita com Banho Dourado e Pedra Quartzo Verde',
+    image: 'https://i.imgur.com/Xs0B7wn.jpg',
+    description: 'Significado: A ematita traz proteção física e emocional, enquanto o quartzo verde é uma pedra de cura e renovação. O banho prateado adiciona elegância e leveza, criando uma harmonia entre equilíbrio e cura.\nRepresenta: Cura, proteção e renovação.',
+    price: 'R$ 149,99',
+    line: 'Linha Exclusive'
+},
+'premium-1': {
+    title: 'Quartzo Verde com Cristal',
+    image: 'https://i.imgur.com/R6dj5rr.jpg',
+    description: 'Significado: O quartzo verde é conhecido por suas poderosas propriedades de cura e renovação energética, promovendo o equilíbrio emocional e físico. O cristal, por sua vez, amplifica energias positivas e traz clareza. Juntas, essas pedras criam uma harmonia perfeita, promovendo purificação e alinhamento espiritual.\nRepresenta: Cura, equilíbrio e amplificação da energia positiva.',
+    price: 'R$ 299,99',
+    line: 'Linha Colares Premium'
+},
+'premium-2': {
+    title: 'Cristais com Quartzo Rosa',
+    image: 'https://i.imgur.com/XQIByN4.jpg',
+    description: 'Significado: O quartzo rosa é a pedra do amor incondicional e da cura emocional, trazendo paz e equilíbrio. Os cristais amplificam a energia positiva ao seu redor, ajudando a criar uma aura de clareza  Os cristais amplificam a energia positiva ao seu redor, ajudando a criar uma aura de clareza e pureza. Juntas, essas pedras promovem harmonia e fortalecimento das relações afetivas, além de atrair energia vibrante e amorosa.\nRepresenta: Amor, serenidade e energia positiva.',
+    price: 'R$ 299,99',
+    line: 'Linha Colares Premium'
+},
+'premium-3': {
+    title: 'Colar Coral com Turquesa',
+    image: 'https://i.imgur.com/QwD7um3.jpg',
+    description: 'Significado: O coral é uma pedra de proteção, fortalecimento e estabilidade emocional, trazendo equilíbrio e harmonia. A turquesa, conhecida por suas propriedades de cura e equilíbrio emocional, é a pedra que promove expressão pessoal e proteção espiritual. Juntas, essas pedras criam uma combinação poderosa que traz energia vibrante e transformadora para quem usa, proporcionando confiança e bem-estar.\nRepresenta: Proteção, expressão e equilíbrio emocional.',
+    price: 'R$ 299,99',
+    line: 'Linha Colares Premium'
+}
+};
+
+// Abrir modal ao clicar em "VER PRODUTO"
+document.querySelectorAll('.product-btn').forEach(button => {
+  if (!button.classList.contains('sold-btn')) {
+      button.addEventListener('click', () => {
+          const productId = button.getAttribute('data-product');
+          const product = productData[productId];
+          
+          if (product) {
+              modalImage.src = product.image;
+              modalImage.alt = product.title;
+              modalTitle.textContent = product.title;
+              modalDescription.innerHTML = product.description.replace(/\n/g, '<br>');
+              modalPrice.textContent = product.price;
+              
+              // Atualizar o link do WhatsApp com as informações do produto
+              const whatsappMessage = `Olá! Estou interessado(a) no produto: ${product.title} - ${product.line} - ${product.price}`;
+              modalBuyBtn.href = `https://wa.me/5551992599848?text=${encodeURIComponent(whatsappMessage)}`;
+              
+              productModal.classList.add('active');
+              document.body.style.overflow = 'hidden'; // Impede o scroll da página
+          }
+      });
+  }
+});
+
+// Fechar modal
+modalClose.addEventListener('click', () => {
+  productModal.classList.remove('active');
+  document.body.style.overflow = ''; // Restaura o scroll da página
+});
+
+// Fechar modal ao clicar fora do conteúdo
+productModal.addEventListener('click', (e) => {
+  if (e.target === productModal) {
+      productModal.classList.remove('active');
+      document.body.style.overflow = ''; // Restaura o scroll da página
+  }
+});
+
+// Setup on page load
+window.addEventListener('DOMContentLoaded', () => {
+  // Setup banner carousels
+  setupBannerCarousel('mobile-banner-carousel', 'mobile-banner-track', 'mobile-banner-dots', 'mobile-banner-prev', 'mobile-banner-next');
+  setupBannerCarousel('desktop-banner-carousel', 'desktop-banner-track', 'desktop-banner-dots', 'desktop-banner-prev', 'desktop-banner-next');
+  
+  // Setup mini carousel
+  setupMiniCarousel();
+  
+  // Setup testimonials carousel
+  setupTestimonialsCarousel();
+  
+  // Setup product carousels
+  setupCarousels();
+  
+  // Set current year in footer
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+  
+  // WhatsApp button
+  setTimeout(() => {
+      document.getElementById('whatsapp-btn').classList.add('visible');
+  }, 1000);
+});
+
+// Update carousels on window resize
+window.addEventListener('resize', () => {
+  setupCarousels();
+  if (document.getElementById('testimonials-track')) {
+      setupTestimonialsCarousel();
+  }
+  if (document.getElementById('mini-carousel-container')) {
+      setupMiniCarousel();
+  }
+});
+
+// Modal de história completa
+const historiaModal = document.getElementById('historia-modal');
+const historiaModalClose = document.getElementById('historia-modal-close');
+const historiaBtn = document.querySelector('.historia-btn');
+
+// Abrir modal da história completa
+historiaBtn.addEventListener('click', () => {
+  historiaModal.classList.add('active');
+  document.body.style.overflow = 'hidden'; // Impede o scroll da página
+});
+
+// Fechar modal da história completa
+historiaModalClose.addEventListener('click', () => {
+  historiaModal.classList.remove('active');
+  document.body.style.overflow = ''; // Restaura o scroll da página
+});
+
+// Fechar modal da história completa ao clicar fora do conteúdo
+historiaModal.addEventListener('click', (e) => {
+  if (e.target === historiaModal) {
+      historiaModal.classList.remove('active');
+      document.body.style.overflow = ''; // Restaura o scroll da página
+  }
+});
+</script>
+</body>
+</html>
